@@ -21,13 +21,13 @@ print("你好")
 # 这里写一些宏观定义的参数
 spark = SparkSession.builder.appName("SparkByExamples.com").getOrCreate()
 
-pipeline_path = '/Users/xiaoyin/PycharmProjects/FlaskDemo/pipeline-lisan-date-feature-0830'
+pipeline_path = '/Users/xiaoyin/model/pipeline-lisan-date-feature-0830'
 loadedPipeline = PipelineModel.load(pipeline_path)
 
-path = "/Users/xiaoyin/PycharmProjects/FlaskDemo/gbt-tree-data-0830"
+path = "/Users/xiaoyin/model/gbt-tree-data-0830"
 gbt2 = GBTClassificationModel.load(path)
 
-stop_words = open('/Users/xiaoyin/PycharmProjects/FlaskDemo/stopwords.txt', 'r', encoding='utf_8').readlines()
+stop_words = open('/Users/xiaoyin/model/stopwords.txt', 'r', encoding='utf_8').readlines()
 
 
 # 建立路由，通过路由可以执行其覆盖的方法，可以多个路由指向同一个方法
