@@ -17,5 +17,5 @@ def formate_time(time_str):
     return time_tuple.tm_hour, time_tuple.tm_mon, weekofyear, season, time_tuple.tm_wday + 1
 
 
-print(formate_time("2021-5-1 8:29:30"))
+# print(formate_time("2021-5-1 8:29:30"))
 # print(formate_time(""))

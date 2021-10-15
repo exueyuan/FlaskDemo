@@ -15,6 +15,7 @@ import jieba
 import pyspark.sql.functions as F
 import time
 import app.date_utils as date_utils
+import random
 
 print("你好")
 # 这里写一些宏观定义的参数
@@ -120,4 +121,9 @@ def get_grade():
     prediction = df.head().prediction
     return jsonify({"status": prediction, "code": 200})
 
+
 # def
+@app.route("/get_grade_test", methods=["GET", "POST"])
+def grade_gr():
+    result = random.randint(0, 1)
+    return jsonify({"status": result, "code": 200})
